@@ -25,5 +25,5 @@ For this project, we use a MongoDB Cloud Atlas database.
 Create an .env file in the server folder with the following variables:
 
     HOST=localhost
-    PORT=3001
+    PORT=4000
     DB_URI=MONGODB_URI
