@@ -1,4 +1,16 @@
-const books = [
+const BookModel = require('./../models/books.model');
+
+const books = BookModel.find({});
+
+const resolvers = {
+  Query: {
+    books: () => books,
+  },
+};
+
+module.exports = resolvers;
+
+[
   {
     title: 'Harry Potter and the Chamber of Secrets',
     author: 'J.K. Rowling',
@@ -8,11 +20,3 @@ const books = [
     author: 'Michael Crichton',
   },
 ];
-
-const resolvers = {
-  Query: {
-    books: () => books,
-  },
-};
-
-module.exports = resolvers;
