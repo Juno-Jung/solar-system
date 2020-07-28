@@ -1,22 +1,14 @@
 const BookModel = require('./../models/books.model');
+const PlanetModel = require('./../models/planets.model');
 
 const books = BookModel.find({});
+const planets = PlanetModel.find({});
 
 const resolvers = {
   Query: {
     books: () => books,
+    planets: () => planets,
   },
 };
 
 module.exports = resolvers;
-
-[
-  {
-    title: 'Harry Potter and the Chamber of Secrets',
-    author: 'J.K. Rowling',
-  },
-  {
-    title: 'Jurassic Park',
-    author: 'Michael Crichton',
-  },
-];
