@@ -20,5 +20,5 @@ server.applyMiddleware({ app });
 app.use(router);
 
 app.listen(PORT, () => {
-  console.log(`Apollo Server is listening at ${HOST}:${PORT}${server.graphqlPath}`);
+  console.log(`Apollo Server (v0.1) is listening at ${HOST}:${PORT}${server.graphqlPath}`);
 });
