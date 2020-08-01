@@ -4,11 +4,25 @@ const PlanetModel = require('./../models/planets.model');
 const books = BookModel.find({});
 const planets = PlanetModel.find({});
 
+
 const resolvers = {
   Query: {
     books: () => books,
-    planets: () => planets,
+    planets: (_, { name }) => {
+      if (name) {
+        return PlanetModel.find({
+          name,
+        });
+      }
+      return planets;
+    },
   },
+
+  Planet: {
+    book: function (obj) {
+      return obj.book;
+    }
+  }
 };
 
 module.exports = resolvers;

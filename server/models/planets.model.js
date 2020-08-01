@@ -14,6 +14,10 @@ const planetSchema = new Schema({
   rotation_period: String,
   escape_velocity: String,
   avg_orbit_distance: String,
+  book: {
+    type: Object,
+    required: false,
+  }
 });
 
 const PlanetModel = mongoose.model('Planets', planetSchema);

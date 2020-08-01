@@ -3,7 +3,7 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   type Query {
     books: [Book]
-    planets: [Planet]
+    planets(name: String): [Planet]
   }
 
   type Planet {
@@ -17,11 +17,13 @@ const typeDefs = gql`
     rotation_period: String # in Earth days
     escape_velocity: String # in km/s
     avg_orbit_distance: String # in millions of kilometers
+    book: Book
   }
 
   type Book {
     title: String
     author: String
-}`;
+  }
+`;
 
 module.exports = typeDefs;
