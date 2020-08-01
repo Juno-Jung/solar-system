@@ -6,7 +6,7 @@ GraphQL project using planetary data from our own solar system.
 ### Back End
 
 Express\
-Apollo\
+Apollo-Server-Express\
 MongoDB\
 Mongoose
 
